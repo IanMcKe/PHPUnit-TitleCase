@@ -3,7 +3,7 @@
     {
         function makeTitleCase($input_title)
         {
-            $non_caps_words = array('A','An');
+            $non_caps_words = array('A', 'An', 'The', 'And', 'Of', 'But', 'Or', 'For', 'Nor', 'With', 'On', 'At', 'To', 'From', 'By' );
 
             $input_array_of_words = explode(" ", $input_title);
             $output_titlecased = array();
