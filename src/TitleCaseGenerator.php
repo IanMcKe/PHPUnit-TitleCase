@@ -4,7 +4,7 @@
         function makeTitleCase($input_title)
         {
             $non_caps_words = array('A', 'An', 'The', 'And', 'Of', 'But', 'Or', 'For', 'Nor', 'With', 'On', 'At', 'To', 'From', 'By' );
-
+//Current regex string in preg_split isn't quite correct.  Currently returns too many spaces between words,mc, and o' instances
             $input_array_of_words = preg_split("/( )|(mc)|(o')/", $input_title, -1, PREG_SPLIT_DELIM_CAPTURE);
             $output_titlecased = array();
             foreach ($input_array_of_words as $word) {
