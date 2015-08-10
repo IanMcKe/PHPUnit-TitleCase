@@ -81,21 +81,76 @@
 //Input: 45 ways to hit a baseball
 //Output: 45 Ways to Hit a Baseball
 
-    function test_errorOnNonLetterCharacter(){
+        function test_errorOnNonLetterCharacter(){
 
-        //Arrange
-        $test_TitleCaseGenerator = new TitleCaseGenerator;
-        $input = "45 ways to hit a baseball";
+            //Arrange
+            $test_TitleCaseGenerator = new TitleCaseGenerator;
+            $input = "45 ways to hit a baseball";
 
-        //Act
-        $result = $test_TitleCaseGenerator->makeTitleCase($input);
+            //Act
+            $result = $test_TitleCaseGenerator->makeTitleCase($input);
 
-        //Assert
-        $this->assertEquals("45 Ways to Hit a Baseball", $result);
+            //Assert
+            $this->assertEquals("45 Ways to Hit a Baseball", $result);
 
 
-    }
+        }
 
+//6. if given a completely uppercase string it will correctly capitalize the string.
+
+//Input: AHHH WE'RE YELLING
+//Output: Ahhh We're Yelling
+
+        function test_makeUppercaseTitleCase()
+        {
+            //Arrange
+            $test_TitleCaseGenerator = new TitleCaseGenerator;
+            $input = "AHHH WE'RE YELLING";
+
+            //Act
+            $result = $test_TitleCaseGenerator->makeTitleCase($input);
+
+            //Assert
+            $this->assertEquals("Ahhh We're Yelling", $result);
+
+        }
+
+//7. if given a string of mixed case characters it will correctly capitalize the string.
+
+//Input: wHo tYpES LIke THIs?
+//Output: Who Types Like This?
+
+        function test_makeMixedcaseTitlecase()
+        {
+            //Arrange
+            $test_TitleCaseGenerator = new TitleCaseGenerator;
+            $input = "wHo tYpES LIke THIs?";
+
+            //Act
+            $result = $test_TitleCaseGenerator->makeTitleCase($input);
+
+            //Assert
+            $this->assertEquals("Who Types Like This?", $result);
+
+        }
+
+//8. If given a string of unique case entries, it will correctly capitalize the string.
+
+//Input: My last name is mckenney
+//Output: My Last Name is McKenney
+
+        function test_makeUniqueCaseTitleCase()
+        {
+            //Arrange
+            $test_TitleCaseGenerator = new TitleCaseGenerator;
+            $input = "My last name is mckenney";
+
+            //Act
+            $result = $test_TitleCaseGenerator->makeTitleCase($input);
+
+            //Assert
+            $this->assertEquals("My Last Name is McKenney", $result);
+        }
 
     }
 ?>

@@ -18,7 +18,7 @@
                     array_push($output_titlecased, $word);
 
                 }else{
-                    array_push($output_titlecased, ucfirst($word));
+                    array_push($output_titlecased, mb_convert_case($word, MB_CASE_TITLE));
                 }//End else
             }//End foreach
 
