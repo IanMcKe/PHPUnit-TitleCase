@@ -3,6 +3,8 @@
 
     class TitleCaseGeneratorTest extends PHPUnit_Framework_TestCase
     {
+
+        //Capitalize the first letter with a single word.
         function test_makeTitleCase_oneword()
         {
             //Arrange
@@ -15,5 +17,7 @@
             //Assert
             $this->assertEquals("Beowulf", $result);
         }
+
+
     }
 ?>
