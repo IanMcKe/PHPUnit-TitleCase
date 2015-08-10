@@ -143,13 +143,13 @@
         {
             //Arrange
             $test_TitleCaseGenerator = new TitleCaseGenerator;
-            $input = "My last name is mckenney";
+            $input = "My last name is mckenney and o'brian";
 
             //Act
             $result = $test_TitleCaseGenerator->makeTitleCase($input);
 
             //Assert
-            $this->assertEquals("My Last Name is McKenney", $result);
+            $this->assertEquals("My Last Name is McKenney and O'Brian", $result);
         }
 
     }

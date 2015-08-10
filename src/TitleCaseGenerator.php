@@ -5,7 +5,7 @@
         {
             $non_caps_words = array('A', 'An', 'The', 'And', 'Of', 'But', 'Or', 'For', 'Nor', 'With', 'On', 'At', 'To', 'From', 'By' );
 
-            $input_array_of_words = explode(" ", $input_title);
+            $input_array_of_words = preg_split("/( )|(mc)|(o')/", $input_title, -1, PREG_SPLIT_DELIM_CAPTURE);
             $output_titlecased = array();
             foreach ($input_array_of_words as $word) {
                 if ($word != $input_array_of_words[0]){
